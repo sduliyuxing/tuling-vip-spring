@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springannopriciple01/springannopriciple01.iml" filepath="$PROJECT_DIR$/springannopriciple01/springannopriciple01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springannopriciple02ext/springannopriciple02ext.iml" filepath="$PROJECT_DIR$/springannopriciple02ext/springannopriciple02ext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springannopriciple03ioc/springannopriciple03ioc.iml" filepath="$PROJECT_DIR$/springannopriciple03ioc/springannopriciple03ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springannopriciple04aop/springannopriciple04aop.iml" filepath="$PROJECT_DIR$/springannopriciple04aop/springannopriciple04aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tulingvipspringannopriciple.iml" filepath="$PROJECT_DIR$/tulingvipspringannopriciple.iml" />
+    </modules>
+  </component>
+</project>
