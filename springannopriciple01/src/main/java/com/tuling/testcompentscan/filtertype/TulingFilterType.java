@@ -23,7 +23,7 @@ public class TulingFilterType implements TypeFilter {
         ClassMetadata classMetadata = metadataReader.getClassMetadata();
         //获取当前类的资源信息
         Resource resource =  metadataReader.getResource();
-
+        System.out.println("类的路径:"+classMetadata.getClassName());
         if(classMetadata.getClassName().contains("dao")) {
             return true;
         }

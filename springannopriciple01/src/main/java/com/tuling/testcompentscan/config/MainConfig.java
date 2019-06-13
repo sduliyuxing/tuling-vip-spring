@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,10 +17,12 @@ import org.springframework.stereotype.Service;
         @ComponentScan.Filter(type = FilterType.ANNOTATION,value = {Controller.class}),
         @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE,value = {TulingService.class})
 })*/
-@ComponentScan(basePackages = {"com.tuling.testcompentscan"},includeFilters = {
-        @ComponentScan.Filter(type = FilterType.ANNOTATION,value = {Controller.class, Service.class}),
+@ComponentScan(basePackages = {"com.tuling.testcompentscan"},excludeFilters = {
+        //@ComponentScan.Filter(type = FilterType.ANNOTATION,value = {Controller.class, Service.class}),
         @ComponentScan.Filter(type = FilterType.CUSTOM,value = TulingFilterType.class)
-},useDefaultFilters = false)
+},includeFilters = {
+        @ComponentScan.Filter(type = FilterType.ANNOTATION,value = Repository.class)
+})
 /*@ComponentScan(basePackages = {"com.tuling.testcompentscan"},includeFilters = {
         @ComponentScan.Filter(type = FilterType.CUSTOM,value = TulingFilterType.class)
 },useDefaultFilters = false)*/

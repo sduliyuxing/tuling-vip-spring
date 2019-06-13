@@ -16,7 +16,5 @@ public class MainClass {
             System.out.println("bean的定义信息:"+name);
         }
 
-/*        TulingController tulingController = ctx.getBean(TulingController.class);
-        System.out.println(tulingController);*/
     }
 }

@@ -1,4 +1,4 @@
-package com.tuling.testbfpostprocessor;
+package com.tuling.testbeanfacotoryPostProcessor;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.MutablePropertyValues;
@@ -8,6 +8,7 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
 
 /**
+ *
  * Created by smlz on 2019/5/26.
  */
 @Component
