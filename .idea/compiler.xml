@@ -10,6 +10,7 @@
         <module name="springannopriciple02ext" />
         <module name="springannopriciple03ioc" />
         <module name="springannopriciple04aop" />
+        <module name="springannopriciple05trans" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +18,7 @@
       <module name="springannopriciple02ext" target="1.7" />
       <module name="springannopriciple03ioc" target="1.5" />
       <module name="springannopriciple04aop" target="1.5" />
+      <module name="springannopriciple05trans" target="1.5" />
       <module name="tulingvipspringannopriciple" target="1.5" />
     </bytecodeTargetLevel>
   </component>

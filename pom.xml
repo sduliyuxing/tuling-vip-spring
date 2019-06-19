@@ -12,6 +12,7 @@
         <module>springannopriciple02ext</module>
         <module>springannopriciple03ioc</module>
         <module>springannopriciple04aop</module>
+        <module>springannopriciple05trans</module>
     </modules>
     <packaging>pom</packaging>
 

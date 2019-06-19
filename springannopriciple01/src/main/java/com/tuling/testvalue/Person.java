@@ -3,9 +3,6 @@ package com.tuling.testvalue;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by smlz on 2019/5/24.
- */
 @Component
 public class Person {
 

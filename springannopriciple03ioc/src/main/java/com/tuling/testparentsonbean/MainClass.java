@@ -11,5 +11,6 @@ public class MainClass {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(MainConfig.class);
         TulingSonCompent tulingSonCompent = ctx.getBean(TulingSonCompent.class);
         tulingSonCompent.print();
+        System.out.println(ctx.getBean("tulingParentCompent"));
     }
 }

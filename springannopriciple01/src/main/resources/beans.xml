@@ -5,6 +5,8 @@
 
     <bean id="car" class="com.tuling.testconfiuration.compent.Car"></bean>
 
-
+    <bean id="driverFactoryBean" class="com.tuling.testfactorybean.DriverFactoryBean">
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/tuling-multids00"></property>
+    </bean>
 
 </beans>

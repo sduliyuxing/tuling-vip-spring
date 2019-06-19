@@ -26,5 +26,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.20.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:1.1.8" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: mysql:mysql-connector-java:5.1.46" level="project" />
   </component>
 </module>

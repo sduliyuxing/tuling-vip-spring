@@ -15,5 +15,11 @@ public class IocMainClass {
 
         MessageSource messageSource =tcx.getBean(MessageSource.class);
         System.out.println(messageSource);
+
+        try {
+
+        }catch (Exception e) {
+
+        }
     }
 }

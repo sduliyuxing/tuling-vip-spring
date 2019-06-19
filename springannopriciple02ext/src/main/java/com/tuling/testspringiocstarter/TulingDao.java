@@ -1,12 +1,20 @@
 package com.tuling.testspringiocstarter;
 
-/**
- * Created by smlz on 2019/6/12.
- */
+import org.springframework.stereotype.Repository;
 
+/**
+ * Created by smlz on 2019/5/19.
+ */
+@Repository
+//@Scope(value = "prototype")
 public class TulingDao {
 
-    public TulingDao() {
-        System.out.println("我是TulingDao的构造方法");
+    private TulingDataSource tulingDataSource;
+
+
+    public TulingDao( TulingDataSource tulingDataSource) {
+        this.tulingDataSource = tulingDataSource;
+        System.out.println("本类的DataSource"+this.tulingDataSource);
     }
+
 }

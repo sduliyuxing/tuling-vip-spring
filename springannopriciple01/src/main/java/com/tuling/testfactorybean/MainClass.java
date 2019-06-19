@@ -13,6 +13,8 @@ public class MainClass {
         System.out.println(bean);
         Object bean2 = ctx.getBean("&carFactoryBean");
         System.out.println(bean2);
+
+        System.out.println(ctx.getBean("driverFactoryBean"));
 /*        Object bean2 = ctx.getBean("&carFactoryBean");
         Object bean3 = ctx.getBean("carFactoryBean");
         CarFactoryBean carFactoryBean = ctx.getBean(CarFactoryBean.class);

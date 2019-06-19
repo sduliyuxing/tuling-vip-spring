@@ -1,5 +1,6 @@
 package com.tuling.circulardependencies;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
@@ -12,4 +13,13 @@ import org.springframework.context.annotation.ImportResource;
 @ComponentScan(basePackages = {"com.tuling.circulardependencies"})
 public class MainConfig {
 
+ /*   @Bean
+    public InstanceA instanceA(InstanceB instanceB){
+        return new InstanceA(instanceB);
+    }
+
+    @Bean
+    public InstanceB instanceB(InstanceA instanceA) {
+        return new InstanceB(instanceA);
+    }*/
 }
