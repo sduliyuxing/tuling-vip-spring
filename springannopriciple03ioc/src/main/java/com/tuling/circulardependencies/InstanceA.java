@@ -16,7 +16,7 @@ public class InstanceA {
     public InstanceB getInstanceB() {
         return instanceB;
     }
-    @Autowired
+
     public void setInstanceB(InstanceB instanceB) {
         this.instanceB = instanceB;
     }

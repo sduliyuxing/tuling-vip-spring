@@ -1,9 +1,10 @@
 package com.tuling.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import javafx.scene.chart.PieChart;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -15,6 +16,7 @@ import javax.sql.DataSource;
  * Created by smlz on 2019/6/17.
  */
 @EnableTransactionManagement
+@EnableAspectJAutoProxy(exposeProxy = true)
 @ComponentScan(basePackages = {"com.tuling"})
 public class MainConfig {
 

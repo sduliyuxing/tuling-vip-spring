@@ -19,6 +19,11 @@ public class AccountInfoDao {
         return jdbcTemplate.update(sql,blance,accountId);
     }
 
+    public int saveAccountInfo(String accountId,double blance) {
+        String sql = "insert into account_info(account_id,blance) values(?,?)";
+        return jdbcTemplate.update(sql,accountId,blance);
+    }
+
     public double qryBlanceByUserId(String accountId) {
         String sql = "select blance from account_info where account_id="+accountId;
         return jdbcTemplate.queryForObject(sql, Double.class);

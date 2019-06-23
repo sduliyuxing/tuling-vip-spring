@@ -22,6 +22,7 @@
 
 
 
+
     <bean id="tulingCompent" class="com.tuling.testparentsonbean.TulingCompent"></bean>
 
     <bean id="tulingParentCompent" class="com.tuling.testparentsonbean.TulingParentCompent" abstract="true">
@@ -29,6 +30,7 @@
     </bean>
 
     <bean id="tulingSonCompent" class="com.tuling.testparentsonbean.TulingSonCompent" parent="tulingParentCompent"></bean>
+
 
 
 

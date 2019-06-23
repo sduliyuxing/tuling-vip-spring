@@ -1,16 +1,13 @@
 package com.tuling;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.*;
 
 /**
  * Created by smlz on 2019/6/10.
  */
 @Configuration
-@EnableAspectJAutoProxy
-//@EnableAspectJAutoProxy(exposeProxy = true)
+//@EnableAspectJAutoProxy(proxyTargetClass = true)
+@EnableAspectJAutoProxy(exposeProxy = true)
 public class MainConfig {
 
     @Bean

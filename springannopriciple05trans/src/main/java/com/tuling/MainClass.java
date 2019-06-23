@@ -13,7 +13,8 @@ public class MainClass {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
 
         PayService payService = context.getBean(PayService.class);
-        payService.pay("123456789",100);
+        payService.pay("123456789",10);
+
 
     }
 }

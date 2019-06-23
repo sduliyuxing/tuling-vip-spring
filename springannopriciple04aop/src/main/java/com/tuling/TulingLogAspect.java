@@ -1,6 +1,7 @@
 package com.tuling;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
 import java.util.Arrays;
@@ -40,11 +41,12 @@ public class TulingLogAspect {
     }
 
 /*    @Around(value = "pointCut()")
-    public void methodAfterThrowing(ProceedingJoinPoint joinPoint) {
+    public void methodAfterThrowing(ProceedingJoinPoint joinPoint) throws Throwable {
         String methodName = joinPoint.getSignature().getName();
         System.out.println("执行目标方法【"+methodName+"】之前执行<环绕通知>,入参"+joinPoint.getArgs());
-        try {
-            //调用目标方法
+        //调用目标方法
+        try  {
+
             joinPoint.proceed();
         } catch (Throwable throwable) {
             System.out.println("调用目标方法异常:"+throwable.getMessage());
