@@ -1,6 +1,5 @@
 package com.tuling;
 
-import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -13,13 +12,6 @@ public class IocMainClass {
         //tcx.getEnvironment().getSystemEnvironment().put("os.tuling","hello");
         tcx.getBean("tulingLog");
 
-        MessageSource messageSource =tcx.getBean(MessageSource.class);
-        System.out.println(messageSource);
 
-        try {
-
-        }catch (Exception e) {
-
-        }
     }
 }

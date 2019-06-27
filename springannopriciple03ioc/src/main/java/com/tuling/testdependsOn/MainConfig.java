@@ -11,7 +11,6 @@ import org.springframework.context.annotation.DependsOn;
 public class MainConfig {
 
     @Bean
-    @DependsOn(value = {"dependsB"})
     public DependsA dependsA() {
         return new DependsA();
     }

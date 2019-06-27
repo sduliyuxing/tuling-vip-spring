@@ -35,9 +35,9 @@ public class PayServiceImpl implements PayService {
         }
 
         //更新库存
-        ((PayService) AopContext.currentProxy()).updateProductStore(1);
+        //((PayService) AopContext.currentProxy()).updateProductStore(1);
 
-        System.out.println(1/0);
+        //System.out.println(1/0);
 
         //更新余额
         int retVal = accountInfoDao.updateAccountBlance(accountId,money);

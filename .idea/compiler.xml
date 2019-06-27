@@ -11,6 +11,8 @@
         <module name="springannopriciple03ioc" />
         <module name="springannopriciple04aop" />
         <module name="springannopriciple05trans" />
+        <module name="springannopriciple06logging" />
+        <module name="tulingvip-springwebflux" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +21,8 @@
       <module name="springannopriciple03ioc" target="1.5" />
       <module name="springannopriciple04aop" target="1.5" />
       <module name="springannopriciple05trans" target="1.5" />
+      <module name="springannopriciple06logging" target="1.5" />
+      <module name="tulingvip-springwebflux" target="1.8" />
       <module name="tulingvipspringannopriciple" target="1.5" />
     </bytecodeTargetLevel>
   </component>

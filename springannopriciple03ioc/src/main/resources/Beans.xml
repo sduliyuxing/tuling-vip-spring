@@ -11,7 +11,7 @@
         <property name="instanceA" ref="instanceA"></property>
     </bean>-->
 
-   <bean id="instanceA"  class="com.tuling.circulardependencies.InstanceA" >
+  <bean id="instanceA"  class="com.tuling.circulardependencies.InstanceA" >
         <constructor-arg name="instanceB"  ref="instanceB"></constructor-arg>
     </bean>
 

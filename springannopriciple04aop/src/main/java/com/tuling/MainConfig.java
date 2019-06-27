@@ -6,8 +6,8 @@ import org.springframework.context.annotation.*;
  * Created by smlz on 2019/6/10.
  */
 @Configuration
-//@EnableAspectJAutoProxy(proxyTargetClass = true)
-@EnableAspectJAutoProxy(exposeProxy = true)
+@EnableAspectJAutoProxy(proxyTargetClass = false)
+//@EnableAspectJAutoProxy(exposeProxy = true)
 public class MainConfig {
 
     @Bean

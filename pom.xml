@@ -13,6 +13,7 @@
         <module>springannopriciple03ioc</module>
         <module>springannopriciple04aop</module>
         <module>springannopriciple05trans</module>
+        <module>springannopriciple06logging</module>
     </modules>
     <packaging>pom</packaging>
 

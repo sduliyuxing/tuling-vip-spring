@@ -26,4 +26,8 @@ public class InstanceB {
     public InstanceB(InstanceA instanceA) {
         this.instanceA = instanceA;
     }
+
+    public InstanceB() {
+        System.out.println("InstanceB实例化");
+    }
 }
