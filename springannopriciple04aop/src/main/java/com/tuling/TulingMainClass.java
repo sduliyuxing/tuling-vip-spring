@@ -12,5 +12,6 @@ public class TulingMainClass {
         Calculate calculate = (Calculate) ctx.getBean("calculate");
         int retVal = calculate.add(2,4);
         System.out.println("运算结果是:"+retVal);
+        System.out.println(ctx.getBean("tulingLogAspect"));
     }
 }

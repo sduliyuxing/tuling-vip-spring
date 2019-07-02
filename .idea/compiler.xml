@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="angle-spring-aop" />
         <module name="springannopriciple01" />
         <module name="springannopriciple02ext" />
         <module name="springannopriciple03ioc" />
@@ -16,6 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="angle-spring-aop" target="1.5" />
       <module name="springannopriciple01" target="1.8" />
       <module name="springannopriciple02ext" target="1.7" />
       <module name="springannopriciple03ioc" target="1.5" />
