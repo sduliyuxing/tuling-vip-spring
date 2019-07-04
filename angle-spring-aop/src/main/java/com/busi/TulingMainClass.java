@@ -13,7 +13,6 @@ public class TulingMainClass {
         Calculate calculate = (Calculate) ctx.getBean("calculate");
         int retVal = calculate.add(2,0);
         System.out.println("运算结果是:"+retVal);
-
     }
 
 
