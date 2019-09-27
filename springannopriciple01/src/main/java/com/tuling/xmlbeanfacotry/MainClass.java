@@ -10,7 +10,7 @@ import org.springframework.core.io.ClassPathResource;
 public class MainClass {
 
     public static void main(String[] args) {
-        //XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(new ClassPathResource("XmlBean.xml"));
+        XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(new ClassPathResource("XmlBean.xml"));
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("XmlBean.xml");
     }
 }

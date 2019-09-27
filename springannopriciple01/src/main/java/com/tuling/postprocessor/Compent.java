@@ -10,6 +10,9 @@ public class Compent {
     public void init(){
         System.out.println("Compent的初始化方法");
     }
+    public void destory(){
+        System.out.println("Compent的销毁方法");
+    }
 
     public Compent() {
         System.out.println("Compent的构造方法");

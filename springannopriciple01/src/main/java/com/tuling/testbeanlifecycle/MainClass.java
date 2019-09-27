@@ -9,8 +9,8 @@ public class MainClass {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(MainConfig.class);
-        //Car car = ctx.getBean(Car.class);
-
+        Book book = (Book) ctx.getBean("book");
+        book.doManage();
         ctx.close();
     }
 }

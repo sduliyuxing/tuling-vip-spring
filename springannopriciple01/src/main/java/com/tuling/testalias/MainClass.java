@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MainClass {
 
-    @Bean(name = {"aliasBean","aliasBean2"})
+    @Bean(name = {"aliasBean1","aliasBean2","aliasBean3"})
     public AliasBean aliasBean() {
         return new AliasBean();
     }

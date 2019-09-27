@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0">
+    <display-name>app server</display-name>
+    <!--web容器加载顺序context-param、
+        初始化上下文信息（ServletContext）
+        listener
+        filter
+        servlet-->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:/config/spring.xml</param-value>
+    </context-param>
+    <listener>
+        <description>spring监听器</description>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!--本次配置主要说明 springIoc的初始时间点，listener在spring监听器之后配置，即可使用ioc容器对象-->
+    <listener>
+        <description>timer轮询定时监听器</description>
+        <listener-class>com.tuling.timer.MessegeTaskListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                classpath:/config/spring-mvc.xml
+            </param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>/index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

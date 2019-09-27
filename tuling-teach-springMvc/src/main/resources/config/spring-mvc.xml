@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <!--RequestMappingHandlerMapping：基于注解方法配置对应映谢-->
+    <mvc:annotation-driven/>
+
+    <!-- 扫描加载Bean-->
+    <!--此处只扫描controller Bean 将控制层与业务层bean分离-->
+    <!--子上下文容器中保存Mvc相关的Action的Bean-->
+    <!--注：父上下文容器（spring上下文）不能访问子上下文（springMVC上下文）容器中内容，-->
+    <!--所以业务层定义的bean不能对控制层AOP，不过也没有必要这么做-->
+    <context:component-scan base-package='com.tuling' use-default-filters='false'>
+        <!--use-default-filters用来指示是否自动扫描带有-->
+        <!--@Component、@Repository、@Service和@Controller的类。默认为true，即默认扫描。而我们要求只是扫描Controller.-->
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+    <!--BeanNameUrlHandlerMapping: 基于ioc name 中已/开头的Bean时行 注册至映谢-->
+    <bean id="/easy.do" class="com.tuling.control.EasyControl"/>
+
+
+    <!--SimpleUrlHandlerMapping：基于手动配置 url 与control 映谢-->
+    <bean id="simpleConrol" class="com.tuling.control.SimpleControl"/>
+    <!-- 统一异常处理-->
+    <bean id="interceptor" class="com.tuling.control.SimpleHandlerInterceptor"/>
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="urlMap">
+            <props>
+                <prop key="/user.do">simpleConrol</prop>
+            </props>
+        </property>
+        <property name="interceptors" ref="interceptor"/>
+    </bean>
+
+    <bean class="com.tuling.control.SimpleExceptionResolver"/>
+    <!-- 调用适配器 -->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+    <!-- 视图仓库 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/page/"/>
+        <property name="suffix" value=".jsp"/>
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+    </bean>
+</beans>

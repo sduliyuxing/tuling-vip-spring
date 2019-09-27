@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.tuling.postprocessor")
 public class MainConfig {
 
-    @Bean(initMethod = "init")
+    @Bean(initMethod = "init",destroyMethod = "destory" )
     public Compent compent() {
         return new Compent();
     }

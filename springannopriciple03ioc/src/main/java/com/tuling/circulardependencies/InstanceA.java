@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 /**
  * Created by smlz on 2019/5/29.
  */
-//@Component
+@Component
 public class InstanceA {
 
-
+    @Autowired
     private InstanceB instanceB;
 
     public InstanceB getInstanceB() {
