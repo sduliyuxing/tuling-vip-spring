@@ -13,7 +13,7 @@ public class MessegeTimerManager {
     public MessegeTimerManager( MessegeTimerTask task ) {
         Timer timer = new Timer();
 //        MessegeTimerTask task = new MessegeTimerTask();
-        timer.schedule(task,2000L,5000);
+        timer.schedule(task,20000L,50000);
     }
 
 }

@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="angle-spring-aop" />
-        <module name="angle-spring-transaction" />
         <module name="springannopriciple01" />
         <module name="springannopriciple02ext" />
         <module name="springannopriciple03ioc" />
